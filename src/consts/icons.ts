@@ -1,0 +1,23 @@
+export const ICONS = {
+  LOOK: require('../assets/icons/headerIcons/look.png'),
+  MENU: require('../assets/icons/headerIcons/menu.png'),
+  umbrellaI: require('../assets/icons/middleIcons/umbrella.png'),
+  windI: require('../assets/icons/middleIcons/wind.png'),
+  humidityI: require('../assets/icons/middleIcons/humidity.png'),
+  ARROW_ORANGE: require('../assets/icons/sliderIcons/arrow.png'),
+  ARROW: require('../assets/icons/arrow.png'),
+  WEATHER: {
+    d01: require('../assets/icons/sliderIcons/01d.png'),
+    n01: require('../assets/icons/sliderIcons/01n.png'),
+    d02: require('../assets/icons/sliderIcons/02d.png'),
+    n02: require('../assets/icons/sliderIcons/02n.png'),
+    d03: require('../assets/icons/sliderIcons/03.png'),
+    d04: require('../assets/icons/sliderIcons/04.png'),
+    d09: require('../assets/icons/sliderIcons/09.png'),
+    d10: require('../assets/icons/sliderIcons/10d.png'),
+    n10: require('../assets/icons/sliderIcons/10n.png'),
+    d11: require('../assets/icons/sliderIcons/11.png'),
+    d13: require('../assets/icons/sliderIcons/13.png'),
+    d50: require('../assets/icons/sliderIcons/50.png'),
+  },
+};
