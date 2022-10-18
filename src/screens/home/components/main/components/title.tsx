@@ -4,7 +4,7 @@ import moment from 'moment';
 
 const date = new Date();
 
-const Title: React.FC = ({ data }: any) => {
+const Title: React.FC = ({ data }) => {
   const { city, country } = data;
 
   return (

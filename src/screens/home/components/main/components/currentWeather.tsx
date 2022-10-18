@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, View, Text, Image, ActivityIndicator } from 'react-native';
 
-const CurrentWeather: React.FC = ({ data }: any) => {
+const CurrentWeather: React.FC = ({ data }) => {
   const { icon, temp, description } = data;
 
   return (

@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, View, ActivityIndicator } from 'react-native';
 import WeatherInfoItem from '../../../elements/weatherInfoItem';
 
-const WeatherInfo: React.FC = ({ data }: any) => {
+const WeatherInfo: React.FC = ({ data }) => {
   return (
     <View style={styles.container}>
       {!data.length ? (
