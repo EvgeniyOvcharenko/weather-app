@@ -2,10 +2,18 @@ import React from 'react';
 import { StyleSheet, View, ActivityIndicator } from 'react-native';
 import WeatherInfoItem from '../../../elements/weatherInfoItem';
 
-const WeatherInfo: React.FC = ({ data }) => {
+interface IProp {
+  weatherInfoData: {
+    textLeft: string;
+    textRight: string;
+    image: number;
+  }[];
+}
+
+const WeatherInfo: React.FC<IProp> = ({ weatherInfoData }) => {
   return (
     <View style={styles.container}>
-      {!data.length ? (
+      {!weatherInfoData.length ? (
         <>
           <ActivityIndicator size="large" style={styles.loader} />
           <ActivityIndicator
@@ -16,7 +24,7 @@ const WeatherInfo: React.FC = ({ data }) => {
         </>
       ) : (
         <>
-          {data.map((element: JSX.IntrinsicAttributes, index: React.Key) => (
+          {weatherInfoData.map((element, index) => (
             <WeatherInfoItem key={index} {...element} />
           ))}
         </>

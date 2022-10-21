@@ -4,8 +4,15 @@ import moment from 'moment';
 
 const date = new Date();
 
-const Title: React.FC = ({ data }) => {
-  const { city, country } = data;
+interface IProp {
+  titleData: {
+    city: string;
+    country: string;
+  };
+}
+
+const Title: React.FC<IProp> = ({ titleData }) => {
+  const { city, country } = titleData;
 
   return (
     <View style={styles.container}>

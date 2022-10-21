@@ -7,7 +7,12 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { Provider } from 'react-redux';
 import store from './redux/store';
 
-const Stack = createNativeStackNavigator();
+export type RootStackParamList = {
+  HomeScreen: undefined;
+  SevenDaysScreen: undefined;
+};
+
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 function App() {
   return (

@@ -34,7 +34,7 @@ function ActiveTime() {
       <Pressable
         onPress={() => navigation.navigate('SevenDaysScreen')}
         style={styles.sevenDays}>
-        <Text style={styles.text}>Next 7 Days</Text>
+        <Text style={styles.text}>Next 5 Days</Text>
         <Image source={ARROW_ORANGE} style={styles.arrow} />
       </Pressable>
     </View>

@@ -19,7 +19,7 @@ const HomeScreen: React.FC = () => {
           barStyle="dark-content"
           backgroundColor="rgba(0,0,0,0)"
         />
-        <Header style={false} />
+        <Header />
         <Main />
         <WeatherSlider />
       </SafeAreaView>
@@ -30,6 +30,7 @@ const HomeScreen: React.FC = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    justifyContent: 'space-between',
   },
   linearGradient: {
     flex: 1,

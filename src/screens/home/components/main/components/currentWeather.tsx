@@ -1,8 +1,23 @@
 import React from 'react';
-import { StyleSheet, View, Text, Image, ActivityIndicator } from 'react-native';
+import {
+  StyleSheet,
+  View,
+  Text,
+  Image,
+  ActivityIndicator,
+  ImageSourcePropType,
+} from 'react-native';
 
-const CurrentWeather: React.FC = ({ data }) => {
-  const { icon, temp, description } = data;
+interface IProp {
+  currentWeatherData: {
+    icon: ImageSourcePropType;
+    temp: number;
+    description: string;
+  };
+}
+
+const CurrentWeather: React.FC<IProp> = ({ currentWeatherData }) => {
+  const { icon, temp, description } = currentWeatherData;
 
   return (
     <View style={styles.currentWeather}>

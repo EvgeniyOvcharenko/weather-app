@@ -25,9 +25,7 @@ const WeatherSlider: React.FC = () => {
     selectors.selectSliderInfo(store),
   );
 
-  const [slideValue, setSlideValue] = useState(
-    parseInt(currentWeatherData?.length, 10),
-  );
+  const [slideValue, setSlideValue] = useState<number>(2);
 
   const renderItem = ({ item }) => {
     const { date, icon, temp } = item;

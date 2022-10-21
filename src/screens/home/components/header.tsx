@@ -8,8 +8,6 @@ import {
   Pressable,
   TextInput,
   Modal,
-  StyleProp,
-  ViewStyle,
 } from 'react-native';
 import { getCurrentWeather, getWeekWeather } from '../../../api/getWeatherInfo';
 import {
@@ -33,11 +31,7 @@ const getWeatherInfo = (storeCity: string, dispatch: Dispatch<AnyAction>) => {
   );
 };
 
-interface IProp {
-  style: StyleProp<ViewStyle>;
-}
-
-const Header: React.FC<IProp> = () => {
+const Header: React.FC = () => {
   const dispatch = useDispatch();
   const data = useSelector((store: RootState) => store.cityReducer.city);
 

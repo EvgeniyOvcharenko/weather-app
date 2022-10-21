@@ -49,8 +49,7 @@ export const weatherReducer = createSlice({
 export const { saveWeekWeather, saveCurrentWeather } = weatherReducer.actions;
 
 //all
-const getCurrentStore = (store: { weatherReducer: any }) =>
-  store.weatherReducer;
+const getCurrentStore = (store: { weatherReducer }) => store.weatherReducer;
 
 //current
 const selectWeatherCurrent = createSelector(getCurrentStore, data => {
@@ -92,10 +91,10 @@ const selectWeatherInfoList = createSelector(selectWeatherCurrent, data => {
           };
       }
     });
-  if (dataKeys.indexOf('rain') < 0) {
+  if (_data.length < 3) {
     _data.push({
       textLeft: 'RainFall',
-      textRight: 0 + 'cm',
+      textRight: '0cm',
       image: umbrellaI,
     });
   }
@@ -122,7 +121,7 @@ const selectSliderInfo = createSelector(selectWeatherWeek, data => {
   if (!dataVal.length) {
     return {};
   }
-  const someElements = dataVal[3].slice(0, 12);
+  const someElements = dataVal[3]?.slice(0, 12);
   const _data = someElements.map((item: ISelectSliderInfoData) => {
     return {
       date: moment(item?.dt_txt).format('HH:mm'),
@@ -139,12 +138,10 @@ const selectSevenDaysTitleInfo: ISelectSevenDaysTitleInfo | any = //// any!!!!!!
     if (!dataVal.length) {
       return {};
     }
-    const someElements = dataVal[3].slice(5, 13);
-    const tomorrowNoontime = someElements.filter(
-      (item: { dt_txt: string | string[] }) => {
-        return item?.dt_txt.includes('12:00:00');
-      },
-    );
+    const someElements = dataVal[3]?.slice(5, 13);
+    const tomorrowNoontime = someElements.filter((item: { dt_txt: string }) => {
+      return item?.dt_txt.includes('12:00:00');
+    });
     const _data = {
       humidity: tomorrowNoontime[0].main.humidity + ' %',
       icon: getIcon(tomorrowNoontime[0].weather[0].icon),

@@ -10,12 +10,10 @@ const Header: React.FC = () => {
 
   return (
     <View style={styles.header}>
-      <Pressable
-        onPress={() => navigation.navigate('HomeScreen')}
-        style={styles.home}>
+      <Pressable onPress={() => navigation.goBack()} style={styles.home}>
         <Image source={ARROW} style={styles.image} />
       </Pressable>
-      <Text style={styles.text}>Next 7 Days</Text>
+      <Text style={styles.text}>Next 5 Days</Text>
     </View>
   );
 };

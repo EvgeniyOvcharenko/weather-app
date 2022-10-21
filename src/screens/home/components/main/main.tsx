@@ -24,9 +24,9 @@ const Main: React.FC = () => {
 
   return (
     <>
-      <Title data={titleData} />
-      <CurrentWeather data={currentWeatherData} />
-      <WeatherInfo data={weatherInfoData} />
+      <Title titleData={titleData} />
+      <CurrentWeather currentWeatherData={currentWeatherData} />
+      <WeatherInfo weatherInfoData={weatherInfoData} />
     </>
   );
 };
